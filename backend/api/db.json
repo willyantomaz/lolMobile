@@ -1,0 +1,54 @@
+{
+  "personagens": [
+    {
+      "id": "1",
+      "nome": "Darius",
+      "local": "Noxus"
+    },
+    {
+      "id": "2",
+      "nome": "Garen",
+      "local": "Demacia"
+    },
+    {
+      "id": "3",
+      "nome": "Ahri",
+      "local": "Ionia"
+    },
+    {
+      "id": "4",
+      "nome": "Ashe",
+      "local": "Freljord"
+    },
+    {
+      "id": "5",
+      "nome": "Jinx",
+      "local": "Zaun"
+    },
+    {
+      "id": "6",
+      "nome": "Zed",
+      "local": "Ionia"
+    },
+    {
+      "id": "7",
+      "nome": "Katarina",
+      "local": "Noxus"
+    },
+    {
+      "id": "8",
+      "nome": "Lux",
+      "local": "Demacia"
+    },
+    {
+      "id": "9",
+      "nome": "Ekko",
+      "local": "Zaun"
+    },
+    {
+      "id": "10",
+      "nome": "Sejuani",
+      "local": "Freljord"
+    }
+  ]
+}
