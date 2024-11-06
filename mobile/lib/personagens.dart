@@ -11,23 +11,38 @@ class Personagens extends StatefulWidget {
 }
 
 class _PersonagensState extends State<Personagens> {
+  Personagem? personagem;
+
+  @override
+  void initState() {
+    super.initState();
+    pegarPersonagem();
+  }
+
+  pegarPersonagem() async {
+    final personagem =
+        await Reqpersonagem(client: http.Client()).fetchPersonagem(1);
+    setState(() {
+      this.personagem = personagem;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Personagens'),
       ),
-      body: const Center(
-        child: Text('Personagens'),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () async {
-          final http.Client client = http.Client();
-          Personagem personagem =
-              await Reqpersonagem(client: client).fetchPersonagem(1);
-          print("${personagem.toString()}");
-        },
-        child: const Icon(Icons.settings_input_component_sharp),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            if (personagem != null) ...[
+              Text(personagem!.name),
+              Text(personagem!.local),
+            ],
+          ],
+        ),
       ),
     );
   }
