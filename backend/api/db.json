@@ -1,54 +1,164 @@
 {
   "personagens": [
     {
-      "id": "1",
-      "nome": "Darius",
-      "local": "Noxus"
+      "id": "266",
+      "nome": "Aatrox",
+      "title": "the Darkin Blade",
+      "tags": "Fighter - Tank",
+      "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Aatrox.png",
+      "description": "Once honored defenders of Shurima against the Void, Aatrox and his brethren would eventually become an even greater threat to Runeterra, and were defeated only by cunning mortal sorcery. But after centuries of imprisonment, Aatrox was the first to find..."
     },
     {
-      "id": "2",
-      "nome": "Garen",
-      "local": "Demacia"
-    },
-    {
-      "id": "3",
+      "id": "103",
       "nome": "Ahri",
-      "local": "Ionia"
+      "title": "the Nine-Tailed Fox",
+      "tags": "Mage - Assassin",
+      "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Ahri.png",
+      "description": "Innately connected to the latent power of Runeterra, Ahri is a vastaya who can reshape magic into orbs of raw energy. She revels in toying with her prey by manipulating their emotions before devouring their life essence. Despite her predatory nature..."
     },
     {
-      "id": "4",
+      "id": "84",
+      "nome": "Akali",
+      "title": "the Rogue Assassin",
+      "tags": "Assassin",
+      "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Akali.png",
+      "description": "Abandoning the Kinkou Order and her title of the Fist of Shadow, Akali now strikes alone, ready to be the deadly weapon her people need. Though she holds onto all she learned from her master Shen, she has pledged to defend Ionia from its enemies, one..."
+    },
+    {
+      "id": "12",
+      "nome": "Alistar",
+      "title": "the Minotaur",
+      "tags": "Tank - Support",
+      "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Alistar.png",
+      "description": "Always a mighty warrior with a fearsome reputation, Alistar seeks revenge for the death of his clan at the hands of the Noxian empire. Though he was enslaved and forced into the life of a gladiator, his unbreakable will was what kept him from truly..."
+    },
+    {
+      "id": "32",
+      "nome": "Amumu",
+      "title": "the Sad Mummy",
+      "tags": "Tank - Mage",
+      "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Amumu.png",
+      "description": "Legend claims that Amumu is a lonely and melancholy soul from ancient Shurima, roaming the world in search of a friend. Doomed by an ancient curse to remain alone forever, his touch is death, his affection ruin. Those who claim to have seen him describe..."
+    },
+    {
+      "id": "34",
+      "nome": "Anivia",
+      "title": "the Cryophoenix",
+      "tags": "Mage - Support",
+      "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Anivia.png",
+      "description": "Anivia is a benevolent winged spirit who endures endless cycles of life, death, and rebirth to protect the Freljord. A demigod born of unforgiving ice and bitter winds, she wields those elemental powers to thwart any who dare disturb her homeland..."
+    },
+    {
+      "id": "1",
+      "nome": "Annie",
+      "title": "the Dark Child",
+      "tags": "Mage",
+      "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Annie.png",
+      "description": "Dangerous, yet disarmingly precocious, Annie is a child mage with immense pyromantic power. Even in the shadows of the mountains north of Noxus, she is a magical outlier. Her natural affinity for fire manifested early in life through unpredictable..."
+    },
+    {
+      "id": "523",
+      "nome": "Aphelios",
+      "title": "the Weapon of the Faithful",
+      "tags": "Marksman",
+      "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Aphelios.png",
+      "description": "Emerging from moonlight's shadow with weapons drawn, Aphelios kills the enemies of his faith in brooding silence—speaking only through the certainty of his aim, and the firing of each gun. Though fueled by a poison that renders him mute, he is guided by..."
+    },
+    {
+      "id": "22",
       "nome": "Ashe",
-      "local": "Freljord"
+      "title": "the Frost Archer",
+      "tags": "Marksman - Support",
+      "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Ashe.png",
+      "description": "Iceborn warmother of the Avarosan tribe, Ashe commands the most populous horde in the north. Stoic, intelligent, and idealistic, yet uncomfortable with her role as leader, she taps into the ancestral magics of her lineage to wield a bow of True Ice..."
     },
     {
-      "id": "5",
-      "nome": "Jinx",
-      "local": "Zaun"
+      "id": "136",
+      "nome": "Aurelion Sol",
+      "title": "The Star Forger",
+      "tags": "Mage",
+      "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/AurelionSol.png",
+      "description": "Aurelion Sol once graced the vast emptiness of the cosmos with celestial wonders of his own devising. Now, he is forced to wield his awesome power at the behest of a space-faring empire that tricked him into servitude. Desiring a return to his..."
     },
     {
-      "id": "6",
-      "nome": "Zed",
-      "local": "Ionia"
+      "id": "268",
+      "nome": "Azir",
+      "title": "the Emperor of the Sands",
+      "tags": "Mage - Marksman",
+      "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Azir.png",
+      "description": "Azir was a mortal emperor of Shurima in a far distant age, a proud man who stood at the cusp of immortality. His hubris saw him betrayed and murdered at the moment of his greatest triumph, but now, millennia later, he has been reborn as an Ascended..."
     },
     {
-      "id": "7",
-      "nome": "Katarina",
-      "local": "Noxus"
+      "id": "432",
+      "nome": "Bard",
+      "title": "the Wandering Caretaker",
+      "tags": "Support - Mage",
+      "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Bard.png",
+      "description": "A traveler from beyond the stars, Bard is an agent of serendipity who fights to maintain a balance where life can endure the indifference of chaos. Many Runeterrans sing songs that ponder his extraordinary nature, yet they all agree that the cosmic..."
     },
     {
-      "id": "8",
-      "nome": "Lux",
-      "local": "Demacia"
+      "id": "53",
+      "nome": "Blitzcrank",
+      "title": "the Great Steam Golem",
+      "tags": "Tank - Fighter",
+      "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Blitzcrank.png",
+      "description": "Blitzcrank is an enormous, near-indestructible automaton from Zaun, originally built to dispose of hazardous waste. However, he found this primary purpose too restricting, and modified his own form to better serve the fragile people of the Sump..."
     },
     {
-      "id": "9",
-      "nome": "Ekko",
-      "local": "Zaun"
+      "id": "63",
+      "nome": "Brand",
+      "title": "the Burning Vengeance",
+      "tags": "Mage",
+      "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Brand.png",
+      "description": "Once a tribesman of the icy Freljord named Kegan Rodhe, the creature known as Brand is a lesson in the temptation of greater power. Seeking one of the legendary World Runes, Kegan betrayed his companions and seized it for himself—and, in an instant, the..."
     },
     {
-      "id": "10",
-      "nome": "Sejuani",
-      "local": "Freljord"
+      "id": "201",
+      "nome": "Braum",
+      "title": "the Heart of the Freljord",
+      "tags": "Support - Tank",
+      "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Braum.png",
+      "description": "Blessed with massive biceps and an even bigger heart, Braum is a beloved hero of the Freljord. Every mead hall north of Frostheld toasts his legendary strength, said to have felled a forest of oaks in a single night, and punched an entire mountain into..."
+    },
+    {
+      "id": "51",
+      "nome": "Caitlyn",
+      "title": "the Sheriff of Piltover",
+      "tags": "Marksman",
+      "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Caitlyn.png",
+      "description": "Renowned as its finest peacekeeper, Caitlyn is also Piltover's best shot at ridding the city of its elusive criminal elements. She is often paired with Vi, acting as a cool counterpoint to her partner's more impetuous nature. Even though she carries a..."
+    },
+    {
+      "id": "164",
+      "nome": "Camille",
+      "title": "the Steel Shadow",
+      "tags": "Fighter - Tank",
+      "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Camille.png",
+      "description": "Weaponized to operate outside the boundaries of the law, Camille is the Principal Intelligencer of Clan Ferros—an elegant and elite agent who ensures the Piltover machine and its Zaunite underbelly runs smoothly. Adaptable and precise, she views sloppy..."
+    },
+    {
+      "id": "69",
+      "nome": "Cassiopeia",
+      "title": "the Serpent's Embrace",
+      "tags": "Mage",
+      "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Cassiopeia.png",
+      "description": "Cassiopeia is a deadly creature bent on manipulating others to her sinister will. Youngest and most beautiful daughter of the noble Du Couteau family of Noxus, she ventured deep into the crypts beneath Shurima in search of ancient power. There, she was..."
+    },
+    {
+      "id": "31",
+      "nome": "Cho'Gath",
+      "title": "the Terror of the Void",
+      "tags": "Tank - Mage",
+      "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Chogath.png",
+      "description": "From the moment Cho'Gath first emerged into the harsh light of Runeterra's sun, the beast was driven by the most pure and insatiable hunger. A perfect expression of the Void's desire to consume all life, Cho'Gath's complex biology quickly converts..."
+    },
+    {
+      "id": "42",
+      "nome": "Corki",
+      "title": "the Daring Bombardier",
+      "tags": "Marksman",
+      "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Corki.png",
+      "description": "The yordle pilot Corki loves two things above all others: flying, and his glamorous mustache... though not necessarily in that order. After leaving Bandle City, he settled in Piltover and fell in love with the wondrous machines he found there. He..."
     }
   ]
 }
