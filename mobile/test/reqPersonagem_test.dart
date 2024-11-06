@@ -19,21 +19,40 @@ void main() {
     tReqPersonagem = Reqpersonagem(client: tHttpClientMock);
   });
 
-  test('should return a Personagem if the http call completes successfully',
-      () async {
-    when(() => tHttpClientMock.get(Uri.parse(tUri))).thenAnswer((_) async =>
-        http.Response(
-            jsonEncode({
-              'id': 1,
-              'name': 'Personagem 1',
-              'local': 'local do Personagem 1'
-            }),
-            200));
-    final result = await tReqPersonagem.fetchPersonagem(1);
+  test(
+    'pegar um personagem',
+    () async {
+      when(() => tHttpClientMock.get(Uri.parse(tUri))).thenAnswer((_) async =>
+          http.Response(
+              jsonEncode({
+                'id': 1,
+                'name': 'Personagem 1',
+                'local': 'local do Personagem 1'
+              }),
+              200));
+      final result = await tReqPersonagem.fetchPersonagem(1);
 
-    expect(result, isA<Personagem>());
-    expect(result.id, 1);
-    expect(result.name, 'Personagem 1');
-    expect(result.local, 'local do Personagem 1');
+      expect(result, isA<Personagem>());
+      expect(result.id, 1);
+      expect(result.name, 'Personagem 1');
+      expect(result.local, 'local do Personagem 1');
+    },
+  );
+
+  test('criar um personagem', () async {
+    when(() => tHttpClientMock.post(
+          Uri.parse('http://localhost:3000/personagens'),
+          headers: <String, String>{
+            'Content-Type': 'application/json; charset=UTF-8',
+          },
+          body: jsonEncode(<String, String>{
+            'name': 'Personagem 1',
+            'local': 'local do Personagem 1',
+          }),
+        )).thenAnswer((_) async => http.Response('', 201));
+
+    final personagem =
+        Personagem(id: 1, name: 'Personagem 1', local: 'local do Personagem 1');
+    await tReqPersonagem.criarPersonagem(personagem);
   });
 }
