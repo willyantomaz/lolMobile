@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mobile/personagens.dart';
+import 'package:mobile/screen/home.dart';
+import 'package:mobile/screen/personagens.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,12 +11,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      //  theme: ThemeData(
-      //  colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      //useMaterial3: true,
-      // ),
-      home: Personagens(),
+    return MaterialApp(
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(
+            seedColor: Colors.blue,
+            secondary: const Color.fromARGB(255, 228, 212, 44)),
+        useMaterial3: true,
+      ),
+      home: const Home(),
     );
   }
 }

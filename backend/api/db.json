@@ -159,6 +159,87 @@
       "tags": "Marksman",
       "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Corki.png",
       "description": "The yordle pilot Corki loves two things above all others: flying, and his glamorous mustache... though not necessarily in that order. After leaving Bandle City, he settled in Piltover and fell in love with the wondrous machines he found there. He..."
+    },
+    {
+      "id": "122",
+      "nome": "Darius",
+      "title": "the Hand of Noxus",
+      "tags": "Fighter - Tank",
+      "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Darius.png",
+      "description": "There is no greater symbol of Noxian might than Darius, the nation's most feared and battle-hardened commander. Rising from humble origins to become the Hand of Noxus, he cleaves through the empire's enemies—many of them Noxians themselves. Knowing that..."
+    },
+    {
+      "id": "131",
+      "nome": "Diana",
+      "title": "Scorn of the Moon",
+      "tags": "Fighter - Mage",
+      "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Diana.png",
+      "description": "Bearing her crescent moonblade, Diana fights as a warrior of the Lunari—a faith all but quashed in the lands around Mount Targon. Clad in shimmering armor the color of winter snow at night, she is a living embodiment of the silver moon's power. Imbued..."
+    },
+    {
+      "id": "119",
+      "nome": "Draven",
+      "title": "the Glorious Executioner",
+      "tags": "Marksman",
+      "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Draven.png",
+      "description": "In Noxus, warriors known as Reckoners face one another in arenas where blood is spilled and strength tested—but none has ever been as celebrated as Draven. A former soldier, he found that the crowds uniquely appreciated his flair for the dramatic, and..."
+    },
+    {
+      "id": "36",
+      "nome": "Dr. Mundo",
+      "title": "the Madman of Zaun",
+      "tags": "Fighter - Tank",
+      "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/DrMundo.png",
+      "description": "Utterly insane, unrepentantly homicidal, and horrifyingly purple, Dr. Mundo is what keeps many of Zaun's citizens indoors on particularly dark nights. This monosyllabic monstrosity seems to want nothing more than pain—both the giving of it, and the..."
+    },
+    {
+      "id": "245",
+      "nome": "Ekko",
+      "title": "the Boy Who Shattered Time",
+      "tags": "Assassin - Fighter",
+      "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Ekko.png",
+      "description": "A prodigy from the rough streets of Zaun, Ekko manipulates time to twist any situation to his advantage. Using his own invention, the Zero Drive, he explores the branching possibilities of reality to craft the perfect moment. Though he revels in this..."
+    },
+    {
+      "id": "60",
+      "nome": "Elise",
+      "title": "the Spider Queen",
+      "tags": "Mage - Fighter",
+      "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Elise.png",
+      "description": "Elise is a deadly predator who dwells in a shuttered, lightless palace, deep within the oldest city of Noxus. Once mortal, she was the mistress of a powerful house, but the bite of a vile demigod transformed her into something beautiful, yet utterly..."
+    },
+    {
+      "id": "28",
+      "nome": "Evelynn",
+      "title": "Agony's Embrace",
+      "tags": "Assassin - Mage",
+      "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Evelynn.png",
+      "description": "Within the dark seams of Runeterra, the demon Evelynn searches for her next victim. She lures in prey with the voluptuous façade of a human female, but once a person succumbs to her charms, Evelynn's true form is unleashed. She then subjects her victim..."
+    },
+    {
+      "id": "81",
+      "nome": "Ezreal",
+      "title": "the Prodigal Explorer",
+      "tags": "Marksman - Mage",
+      "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Ezreal.png",
+      "description": "A dashing adventurer, unknowingly gifted in the magical arts, Ezreal raids long-lost catacombs, tangles with ancient curses, and overcomes seemingly impossible odds with ease. His courage and bravado knowing no bounds, he prefers to improvise his way..."
+    },
+    {
+      "id": "9",
+      "nome": "Fiddlesticks",
+      "title": "the Ancient Fear",
+      "tags": "Mage - Support",
+      "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Fiddlesticks.png",
+      "description": "Something has awoken in Runeterra. Something ancient. Something terrible. The ageless horror known as Fiddlesticks stalks the edges of mortal society, drawn to areas thick with paranoia where it feeds upon terrorized victims. Wielding a jagged scythe..."
+    },
+    {
+      "id": "114",
+      "nome": "Fiora",
+      "title": "the Grand Duelist",
+      "tags": "Fighter - Assassin",
+      "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Fiora.png",
+      "description": "The most feared duelist in all Valoran, Fiora is as renowned for her brusque manner and cunning mind as she is for the speed of her bluesteel rapier. Born to House Laurent in the kingdom of Demacia, Fiora took control of the family from her father in..."
     }
+    
   ]
 }
