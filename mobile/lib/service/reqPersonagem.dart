@@ -1,13 +1,28 @@
 import 'dart:math';
 
 import 'package:http/http.dart' as http;
-import 'package:mobile/personagemClass.dart';
+import 'package:mobile/domain/personagemClass.dart';
 import 'dart:convert';
 
 class Reqpersonagem {
   final http.Client client;
 
   Reqpersonagem({required this.client});
+
+  Future<List<Personagem>> fetchTodosPersonagens() async {
+    final response =
+        await client.get(Uri.parse('http://localhost:3000/personagens'));
+
+    if (response.statusCode == 200) {
+      List<dynamic> personagensJson = json.decode(response.body);
+      List<Personagem> personagens = personagensJson
+          .map((personagem) => Personagem.fromJson(personagem))
+          .toList();
+      return personagens;
+    } else {
+      throw Exception('Failed to load personagens');
+    }
+  }
 
   Future<Personagem> fetchPersonagem(int id) async {
     final response =
@@ -27,8 +42,8 @@ class Reqpersonagem {
         'Content-Type': 'application/json; charset=UTF-8',
       },
       body: jsonEncode(<String, String>{
-        'name': personagem.name,
-        'local': personagem.local,
+        'name': personagem.nome,
+        'title': personagem.title,
       }),
     );
 

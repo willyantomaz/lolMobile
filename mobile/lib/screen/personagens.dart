@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mobile/personagemClass.dart';
-import 'package:mobile/reqPersonagem.dart';
+import 'package:mobile/domain/personagemClass.dart';
+import 'package:mobile/service/reqPersonagem.dart';
 import 'package:http/http.dart' as http;
 
 class Personagens extends StatefulWidget {
@@ -11,7 +11,7 @@ class Personagens extends StatefulWidget {
 }
 
 class _PersonagensState extends State<Personagens> {
-  Personagem? personagem;
+  List<Personagem>? personagem;
 
   @override
   void initState() {
@@ -21,7 +21,7 @@ class _PersonagensState extends State<Personagens> {
 
   pegarPersonagem() async {
     final personagem =
-        await Reqpersonagem(client: http.Client()).fetchPersonagem(1);
+        await Reqpersonagem(client: http.Client()).fetchTodosPersonagens();
     setState(() {
       this.personagem = personagem;
     });
@@ -33,17 +33,29 @@ class _PersonagensState extends State<Personagens> {
       appBar: AppBar(
         title: const Text('Personagens'),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            if (personagem != null) ...[
-              Text(personagem!.name),
-              Text(personagem!.local),
-            ],
-          ],
-        ),
-      ),
+      body: personagem == null
+          ? const Center(child: CircularProgressIndicator())
+          : ListView.builder(
+              itemCount: personagem!.length,
+              itemBuilder: (context, index) {
+                return Card(
+                  child: ExpansionTile(
+                    leading: Image.network(personagem![index].icon),
+                    title: Text(personagem![index].nome),
+                    subtitle: Text(personagem![index].title),
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: Text(
+                          personagem![index].description,
+                          style: TextStyle(fontSize: 16),
+                        ),
+                      ),
+                    ],
+                  ),
+                );
+              },
+            ),
     );
   }
 }

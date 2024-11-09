@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mobile/personagemClass.dart';
+import 'package:mobile/screen/createPersonagem.dart';
 import 'package:mobile/screen/personagens.dart';
 
 class Home extends StatelessWidget {
@@ -15,7 +15,7 @@ class Home extends StatelessWidget {
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             const Text(
               'Bem vindo ao Wike Personagens do LoL',
@@ -25,10 +25,11 @@ class Home extends StatelessWidget {
                 width: 200,
                 height: 200,
                 decoration: const BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(100)),
+                  borderRadius: BorderRadius.all(Radius.circular(20)),
+                  color: Colors.blue,
                 ),
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     ElevatedButton(
                       onPressed: () {
@@ -44,7 +45,8 @@ class Home extends StatelessWidget {
                         Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const Personagens()));
+                                builder: (context) =>
+                                    const CreatePersonagem()));
                       },
                       child: const Text("Criar Personagem"),
                     )

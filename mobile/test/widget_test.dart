@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mobile/personagemClass.dart';
-import 'package:mobile/personagens.dart';
+import 'package:mobile/screen/personagens.dart';
 
 void main() {
   testWidgets('Personagens widget test', (WidgetTester tester) async {
