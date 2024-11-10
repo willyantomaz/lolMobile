@@ -41,9 +41,12 @@ class Reqpersonagem {
       headers: <String, String>{
         'Content-Type': 'application/json; charset=UTF-8',
       },
-      body: jsonEncode(<String, String>{
-        'name': personagem.nome,
+      body: jsonEncode(<String, dynamic>{
+        'nome': personagem.nome,
         'title': personagem.title,
+        'tags': personagem.tags,
+        'icon': personagem.icon,
+        'description': personagem.description,
       }),
     );
 

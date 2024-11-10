@@ -1,5 +1,11 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
+import 'package:mobile/domain/personagemClass.dart';
+import 'package:mobile/screen/home.dart';
 import 'package:mobile/screen/personagens.dart';
+import 'package:mobile/service/reqPersonagem.dart';
+import 'package:http/http.dart' as http;
 
 class CreatePersonagem extends StatefulWidget {
   const CreatePersonagem({super.key});
@@ -9,6 +15,14 @@ class CreatePersonagem extends StatefulWidget {
 }
 
 class _CreatepersonagemState extends State<CreatePersonagem> {
+  final _formKey = GlobalKey<FormState>();
+
+  String? nome;
+  String? title;
+  String? tags;
+  String? icon;
+  String? description;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,46 +32,68 @@ class _CreatepersonagemState extends State<CreatePersonagem> {
         backgroundColor: Theme.of(context).colorScheme.secondary,
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            const Text(
-              'Crie seu personagem',
-            ),
-            Center(
-              child: Container(
-                width: 200,
-                height: 200,
-                decoration: const BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(100)),
-                ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    ElevatedButton(
-                      onPressed: () {
-                        Navigator.pushReplacement(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const Personagens()));
-                      },
-                      child: const Text("Visualizar Personagens"),
-                    ),
-                    ElevatedButton(
-                      onPressed: () {
-                        Navigator.pushReplacement(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) =>
-                                    const CreatePersonagem()));
-                      },
-                      child: const Text("Criar Personagem"),
-                    )
-                  ],
+        child: Form(
+          key: _formKey,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              const Text('Crie seu personagem do LOL'),
+              Center(
+                child: Container(
+                  child: Column(
+                    children: [
+                      TextFormField(
+                        decoration: const InputDecoration(labelText: 'Nome'),
+                        onSaved: (value) => nome = value,
+                      ),
+                      TextFormField(
+                        decoration: const InputDecoration(labelText: 'Title'),
+                        onSaved: (value) => title = value,
+                      ),
+                      TextFormField(
+                        decoration: const InputDecoration(labelText: 'Tags'),
+                        onSaved: (value) => tags = value,
+                      ),
+                      TextFormField(
+                        decoration: const InputDecoration(labelText: 'Icon'),
+                        onSaved: (value) => icon = value,
+                      ),
+                      TextFormField(
+                        decoration:
+                            const InputDecoration(labelText: 'Description'),
+                        onSaved: (value) => description = value,
+                      ),
+                      ElevatedButton(
+                        onPressed: () {
+                          if (_formKey.currentState!.validate()) {
+                            _formKey.currentState!.save();
+                            int idInte = Random().nextInt(100);
+                            Reqpersonagem(client: http.Client())
+                                .criarPersonagem(
+                              Personagem(
+                                id: "$idInte",
+                                nome: nome!,
+                                title: title!,
+                                tags: tags!,
+                                icon: icon!,
+                                description: description!,
+                              ),
+                            );
+                            Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const Home()),
+                            );
+                          }
+                        },
+                        child: const Text("Criar Personagem"),
+                      ),
+                    ],
+                  ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

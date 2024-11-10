@@ -43,12 +43,13 @@ class _PersonagensState extends State<Personagens> {
                     leading: Image.network(personagem![index].icon),
                     title: Text(personagem![index].nome),
                     subtitle: Text(personagem![index].title),
+                    trailing: Text(personagem![index].tags),
                     children: [
                       Padding(
                         padding: const EdgeInsets.all(16.0),
                         child: Text(
                           personagem![index].description,
-                          style: TextStyle(fontSize: 16),
+                          style: const TextStyle(fontSize: 16),
                         ),
                       ),
                     ],
