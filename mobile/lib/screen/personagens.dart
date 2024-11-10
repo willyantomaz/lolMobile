@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mobile/domain/personagemClass.dart';
 import 'package:mobile/screen/dialogAtualizaPersonagem.dart';
+import 'package:mobile/screen/home.dart';
 import 'package:mobile/service/reqPersonagem.dart';
 import 'package:http/http.dart' as http;
 
@@ -31,9 +32,17 @@ class _PersonagensState extends State<Personagens> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Personagens'),
-      ),
+      appBar: AppBar(title: const Text('Personagens'), actions: [
+        IconButton(
+          icon: const Icon(Icons.home),
+          onPressed: () {
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (context) => const Home()),
+            );
+          },
+        ),
+      ]),
       body: personagem == null
           ? const Center(child: CircularProgressIndicator())
           : ListView.builder(

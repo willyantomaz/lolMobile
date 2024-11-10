@@ -29,6 +29,17 @@ class _CreatepersonagemState extends State<CreatePersonagem> {
         title: const Text('Criar Personagem'),
         centerTitle: true,
         backgroundColor: Theme.of(context).colorScheme.secondary,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.home),
+            onPressed: () {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => const Home()),
+              );
+            },
+          ),
+        ],
       ),
       body: Center(
         child: Form(
