@@ -56,4 +56,38 @@ class Reqpersonagem {
       print('Personagem criado com sucesso');
     }
   }
+
+  Future<void> deletarPersonagem(String id) async {
+    final response =
+        await client.delete(Uri.parse('http://localhost:3000/personagens/$id'));
+
+    if (response.statusCode != 200) {
+      throw Exception('Failed to delete personagem');
+    } else {
+      print('Personagem deletado com sucesso');
+    }
+  }
+
+  Future<void> atualizarPersonagem(Personagem personagem) async {
+    final response = await client.put(
+      Uri.parse('http://localhost:3000/personagens/${personagem.id}'),
+      headers: <String, String>{
+        'Content-Type': 'application/json; charset=UTF-8',
+      },
+      body: jsonEncode(<String, dynamic>{
+        'nome': personagem.nome,
+        'title': personagem.title,
+        'tags': personagem.tags,
+        'icon': personagem.icon,
+        'description': personagem.description,
+      }),
+    );
+
+    if (response.statusCode != 200) {
+      throw Exception('Failed to update personagem');
+    } else {
+      print(personagem.nome);
+      print('Personagem atualizado com sucesso');
+    }
+  }
 }

@@ -3,7 +3,6 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:mobile/domain/personagemClass.dart';
 import 'package:mobile/screen/home.dart';
-import 'package:mobile/screen/personagens.dart';
 import 'package:mobile/service/reqPersonagem.dart';
 import 'package:http/http.dart' as http;
 
