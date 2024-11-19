@@ -22,20 +22,25 @@ void main() {
   test(
     'pegar um personagem',
     () async {
-      when(() => tHttpClientMock.get(Uri.parse(tUri))).thenAnswer((_) async =>
-          http.Response(
+      when(() => tHttpClientMock.get(Uri.parse(tUri)))
+          .thenAnswer((_) async => http.Response(
               jsonEncode({
-                'id': 1,
-                'name': 'Personagem 1',
-                'local': 'local do Personagem 1'
+                "id": "9",
+                "nome": "Fiddlesticks",
+                "title": "the Ancient Fear",
+                "tags": "Mage - Support",
+                "icon":
+                    "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Fiddlesticks.png",
+                "description":
+                    "Something has awoken in Runeterra. Something ancient. Something terrible. The ageless horror known as Fiddlesticks stalks the edges of mortal society, drawn to areas thick with paranoia where it feeds upon terrorized victims. Wielding a jagged scythe..."
               }),
               200));
       final result = await tReqPersonagem.fetchPersonagem(1);
 
       expect(result, isA<Personagem>());
-      expect(result.id, 1);
-      expect(result.name, 'Personagem 1');
-      expect(result.local, 'local do Personagem 1');
+      expect(result.id, "9");
+      expect(result.nome, 'Fiddlesticks');
+      expect(result.title, 'the Ancient Fear');
     },
   );
 
@@ -46,13 +51,26 @@ void main() {
             'Content-Type': 'application/json; charset=UTF-8',
           },
           body: jsonEncode(<String, String>{
-            'name': 'Personagem 1',
-            'local': 'local do Personagem 1',
+            "id": "9",
+            "nome": "Fiddlesticks",
+            "title": "the Ancient Fear",
+            "tags": "Mage - Support",
+            "icon":
+                "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Fiddlesticks.png",
+            "description":
+                "Something has awoken in Runeterra. Something ancient. Something terrible. The ageless horror known as Fiddlesticks stalks the edges of mortal society, drawn to areas thick with paranoia where it feeds upon terrorized victims. Wielding a jagged scythe..."
           }),
         )).thenAnswer((_) async => http.Response('', 201));
 
-    final personagem =
-        Personagem(id: 1, name: 'Personagem 1', local: 'local do Personagem 1');
+    final personagem = Personagem(
+        id: "9",
+        nome: 'Fiddlesticks',
+        title: 'the Ancient Fear',
+        tags: 'Mage - Support',
+        icon:
+            'http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Fiddlesticks.png',
+        description:
+            'Something has awoken in Runeterra. Something ancient. Something terrible. The ageless horror known as Fiddlesticks stalks the edges of mortal society, drawn to areas thick with paranoia where it feeds upon terrorized victims. Wielding a jagged scythe...');
     await tReqPersonagem.criarPersonagem(personagem);
   });
 }

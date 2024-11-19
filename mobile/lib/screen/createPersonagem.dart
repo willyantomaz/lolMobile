@@ -26,7 +26,8 @@ class _CreatepersonagemState extends State<CreatePersonagem> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Criar Personagem'),
+        title: const Text('Criar Personagem',
+            style: TextStyle(color: Colors.amber, fontWeight: FontWeight.bold)),
         centerTitle: true,
         backgroundColor: Theme.of(context).colorScheme.secondary,
         actions: [
@@ -47,31 +48,47 @@ class _CreatepersonagemState extends State<CreatePersonagem> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              const Text('Crie seu personagem do LOL'),
+              const Text('Crie seu personagem do LOL',
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.blueGrey,
+                  ),
+                  textAlign: TextAlign.center),
               Center(
                 child: Container(
                   child: Column(
                     children: [
-                      TextFormField(
-                        decoration: const InputDecoration(labelText: 'Nome'),
-                        onSaved: (value) => nome = value,
+                      Card(
+                        child: TextFormField(
+                          decoration: const InputDecoration(labelText: 'Nome'),
+                          onSaved: (value) => nome = value,
+                        ),
                       ),
-                      TextFormField(
-                        decoration: const InputDecoration(labelText: 'Title'),
-                        onSaved: (value) => title = value,
+                      Card(
+                        child: TextFormField(
+                          decoration: const InputDecoration(labelText: 'Title'),
+                          onSaved: (value) => title = value,
+                        ),
                       ),
-                      TextFormField(
-                        decoration: const InputDecoration(labelText: 'Tags'),
-                        onSaved: (value) => tags = value,
+                      Card(
+                        child: TextFormField(
+                          decoration: const InputDecoration(labelText: 'Tags'),
+                          onSaved: (value) => tags = value,
+                        ),
                       ),
-                      TextFormField(
-                        decoration: const InputDecoration(labelText: 'Icon'),
-                        onSaved: (value) => icon = value,
+                      Card(
+                        child: TextFormField(
+                          decoration: const InputDecoration(labelText: 'Icon'),
+                          onSaved: (value) => icon = value,
+                        ),
                       ),
-                      TextFormField(
-                        decoration:
-                            const InputDecoration(labelText: 'Description'),
-                        onSaved: (value) => description = value,
+                      Card(
+                        child: TextFormField(
+                          decoration:
+                              const InputDecoration(labelText: 'Description'),
+                          onSaved: (value) => description = value,
+                        ),
                       ),
                       ElevatedButton(
                         onPressed: () {

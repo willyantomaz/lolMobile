@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mobile/screen/home.dart';
-import 'package:mobile/screen/personagens.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,8 +14,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
-            seedColor: Colors.blue,
-            secondary: const Color.fromARGB(255, 228, 212, 44)),
+            seedColor: Colors.blue, secondary: Colors.black),
         useMaterial3: true,
       ),
       home: const Home(),

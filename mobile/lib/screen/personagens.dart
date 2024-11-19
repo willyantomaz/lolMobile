@@ -63,10 +63,9 @@ class _PersonagensState extends State<Personagens> {
                                 context: context,
                                 builder: (BuildContext context) =>
                                     Dialogatualizapersonagem(
-                                        id: personagem![index].id));
-                            setState(() {
-                              pegarPersonagem();
-                            });
+                                      id: personagem![index].id,
+                                      personagem: personagem![index],
+                                    ));
                           },
                         ),
                         IconButton(
